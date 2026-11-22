@@ -1,0 +1,48 @@
+================================================================================
+CORRECTED HYBRID-K SPLIT AUDIT (parent-image grouped)
+================================================================================
+scikit-learn 1.9.1; outer StratifiedGroupKFold(5, seed 42); calibration = 1/8 of outer-train parent images (StratifiedGroupKFold, seed 42+k)
+Cells: 4049 | parent images: 966 | classes: ['im_Dyskeratotic', 'im_Koilocytotic', 'im_Metaplastic', 'im_Parabasal', 'im_Superficial-Intermediate']
+Grouping unit: PARENT IMAGE (class folder + NNN prefix). Not a patient or slide ID.
+
+Per-fold sizes and parent-image overlap (must all be 0):
+ fold  train_cells  calib_cells  test_cells  train_parents  calib_parents  test_parents  overlap_train_test  overlap_calib_test  overlap_train_calib  test_cells_with_sibling_outside_test
+    0         2834          405         810            676             97           193                   0                   0                    0                                     0
+    1         2833          406         810            676             97           193                   0                   0                    0                                     0
+    2         2835          405         809            678             96           192                   0                   0                    0                                     0
+    3         2834          405         810            676             96           194                   0                   0                    0                                     0
+    4         2834          405         810            675             97           194                   0                   0                    0                                     0
+
+Class distribution of test folds (cells):
+test_fold                      0    1    2    3    4
+class                                               
+im_Dyskeratotic              163  162  162  163  163
+im_Koilocytotic              165  165  165  165  165
+im_Metaplastic               158  159  158  159  159
+im_Parabasal                 158  158  157  157  157
+im_Superficial-Intermediate  166  166  167  166  166
+
+Class distribution of calibration subsets (cells):
+fold                          0   1   2   3   4
+class                                          
+im_Dyskeratotic              81  82  82  81  82
+im_Koilocytotic              83  83  83  83  83
+im_Metaplastic               80  80  80  80  79
+im_Parabasal                 79  78  78  79  78
+im_Superficial-Intermediate  82  83  82  82  83
+
+For comparison, ORIGINAL cell-level split: 3710/4049 test cells (91.6%) had a sibling from the same parent image in training.
+CORRECTED split: 0/4049 test cells.
+
+CHECKS
+  [PASS] Every parent image assigned to exactly one test fold  (0 parents split across test folds)
+  [PASS] Fold 0: zero parent overlap train/test, calib/test, train/calib  (0/0/0)
+  [PASS] Fold 1: zero parent overlap train/test, calib/test, train/calib  (0/0/0)
+  [PASS] Fold 2: zero parent overlap train/test, calib/test, train/calib  (0/0/0)
+  [PASS] Fold 3: zero parent overlap train/test, calib/test, train/calib  (0/0/0)
+  [PASS] Fold 4: zero parent overlap train/test, calib/test, train/calib  (0/0/0)
+  [PASS] Every class present in every calibration subset
+  [PASS] Every class present in every test fold
+  [PASS] Each cell is test exactly once
+
+OVERALL: ALL CHECKS PASSED - zero parent-image overlap.

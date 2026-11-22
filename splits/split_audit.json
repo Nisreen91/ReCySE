@@ -1,0 +1,123 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "Every parent image assigned to exactly one test fold",
+      "passed": true,
+      "note": "0 parents split across test folds"
+    },
+    {
+      "check": "Fold 0: zero parent overlap train/test, calib/test, train/calib",
+      "passed": true,
+      "note": "0/0/0"
+    },
+    {
+      "check": "Fold 1: zero parent overlap train/test, calib/test, train/calib",
+      "passed": true,
+      "note": "0/0/0"
+    },
+    {
+      "check": "Fold 2: zero parent overlap train/test, calib/test, train/calib",
+      "passed": true,
+      "note": "0/0/0"
+    },
+    {
+      "check": "Fold 3: zero parent overlap train/test, calib/test, train/calib",
+      "passed": true,
+      "note": "0/0/0"
+    },
+    {
+      "check": "Fold 4: zero parent overlap train/test, calib/test, train/calib",
+      "passed": true,
+      "note": "0/0/0"
+    },
+    {
+      "check": "Every class present in every calibration subset",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Every class present in every test fold",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Each cell is test exactly once",
+      "passed": true,
+      "note": ""
+    }
+  ],
+  "per_fold": [
+    {
+      "fold": 0,
+      "train_cells": 2834,
+      "calib_cells": 405,
+      "test_cells": 810,
+      "train_parents": 676,
+      "calib_parents": 97,
+      "test_parents": 193,
+      "overlap_train_test": 0,
+      "overlap_calib_test": 0,
+      "overlap_train_calib": 0,
+      "test_cells_with_sibling_outside_test": 0
+    },
+    {
+      "fold": 1,
+      "train_cells": 2833,
+      "calib_cells": 406,
+      "test_cells": 810,
+      "train_parents": 676,
+      "calib_parents": 97,
+      "test_parents": 193,
+      "overlap_train_test": 0,
+      "overlap_calib_test": 0,
+      "overlap_train_calib": 0,
+      "test_cells_with_sibling_outside_test": 0
+    },
+    {
+      "fold": 2,
+      "train_cells": 2835,
+      "calib_cells": 405,
+      "test_cells": 809,
+      "train_parents": 678,
+      "calib_parents": 96,
+      "test_parents": 192,
+      "overlap_train_test": 0,
+      "overlap_calib_test": 0,
+      "overlap_train_calib": 0,
+      "test_cells_with_sibling_outside_test": 0
+    },
+    {
+      "fold": 3,
+      "train_cells": 2834,
+      "calib_cells": 405,
+      "test_cells": 810,
+      "train_parents": 676,
+      "calib_parents": 96,
+      "test_parents": 194,
+      "overlap_train_test": 0,
+      "overlap_calib_test": 0,
+      "overlap_train_calib": 0,
+      "test_cells_with_sibling_outside_test": 0
+    },
+    {
+      "fold": 4,
+      "train_cells": 2834,
+      "calib_cells": 405,
+      "test_cells": 810,
+      "train_parents": 675,
+      "calib_parents": 97,
+      "test_parents": 194,
+      "overlap_train_test": 0,
+      "overlap_calib_test": 0,
+      "overlap_train_calib": 0,
+      "test_cells_with_sibling_outside_test": 0
+    }
+  ],
+  "sklearn": "1.9.1",
+  "design": {
+    "outer": "StratifiedGroupKFold(5, shuffle=True, random_state=42)",
+    "calib": "StratifiedGroupKFold(8, shuffle=True, random_state=42+k), first fold",
+    "group": "class folder + parent prefix NNN"
+  }
+}

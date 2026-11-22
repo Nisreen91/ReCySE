@@ -1,0 +1,13 @@
+# Versions recorded in the training runs (Google Colab, Python 3.13, NVIDIA L4); see protocols/run_configs/
+torch==2.11.0
+torchvision==0.26.0
+timm==1.0.11
+scikit-learn==1.6.1
+kagglehub
+
+# Analysis and post-hoc scripts (versions not recorded)
+numpy
+pandas
+scipy
+matplotlib
+Pillow

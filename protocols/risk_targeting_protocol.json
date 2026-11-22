@@ -1,0 +1,64 @@
+{
+  "status": "EXPLORATORY; no formal risk guarantee; test folds examined earlier; design chosen after a previous test-half analysis",
+  "written_at": "2026-11-06T16:38:08",
+  "target_risk_alpha": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.05,
+    0.06,
+    0.07,
+    0.08,
+    0.09,
+    0.1
+  ],
+  "definition": "alpha = maximum acceptable error rate among automatically accepted cells",
+  "threshold_rule": "candidate tau = every distinct calibration confidence; lowest tau with one-sided 90% Clopper-Pearson upper bound on calibration selective risk <= alpha; refer all if none qualifies",
+  "score": "max probability of the frozen ensemble with its frozen full-calibration temperature",
+  "configurations": [
+    "Hybrid-2",
+    "Hybrid-3",
+    "Hybrid-4",
+    "Accuracy Top-2",
+    "Accuracy Top-3",
+    "Accuracy Top-4",
+    "All-9 equal-weight",
+    "Best single (composite)"
+  ],
+  "test_use": "thresholds frozen and saved before test predictions are read; test applied once",
+  "outcomes": [
+    "test coverage",
+    "referral rate",
+    "achieved test selective risk",
+    "target met (achieved <= alpha)",
+    "tau"
+  ],
+  "tests": {
+    "alphas": [
+      0.03,
+      0.05
+    ],
+    "outcomes": [
+      "coverage",
+      "selective_risk"
+    ],
+    "comparisons": [
+      "Hybrid-2 vs Best single (composite)",
+      "Hybrid-3 vs Best single (composite)",
+      "Hybrid-4 vs Best single (composite)",
+      "Accuracy Top-2 vs Best single (composite)",
+      "Accuracy Top-3 vs Best single (composite)",
+      "Accuracy Top-4 vs Best single (composite)",
+      "All-9 equal-weight vs Best single (composite)",
+      "Hybrid-2 vs Accuracy Top-2",
+      "Hybrid-3 vs Accuracy Top-3",
+      "Hybrid-4 vs Accuracy Top-4"
+    ],
+    "method": "seeds averaged within fold; Nadeau-Bengio corrected paired t (df=4); Holm within alpha x outcome"
+  },
+  "not_claimed": [
+    "formal risk guarantee",
+    "superiority of Hybrid-K"
+  ]
+}

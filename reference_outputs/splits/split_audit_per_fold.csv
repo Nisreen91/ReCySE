@@ -1,0 +1,6 @@
+fold,train_cells,calib_cells,test_cells,train_parents,calib_parents,test_parents,overlap_train_test,overlap_calib_test,overlap_train_calib
+0,2834,405,810,676,97,193,0,0,0
+1,2833,406,810,676,97,193,0,0,0
+2,2835,405,809,678,96,192,0,0,0
+3,2834,405,810,676,96,194,0,0,0
+4,2834,405,810,675,97,194,0,0,0

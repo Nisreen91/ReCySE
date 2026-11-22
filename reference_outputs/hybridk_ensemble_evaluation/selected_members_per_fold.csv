@@ -1,0 +1,91 @@
+config,fold,n_members,members
+Hybrid-2,0,2,ViT-Tiny + Swin-Tiny
+Hybrid-2,1,2,TinyViT-5M + DenseNet121
+Hybrid-2,2,2,TinyViT-5M + DenseNet121
+Hybrid-2,3,2,MobileViT-XS + DenseNet121
+Hybrid-2,4,2,ResNet50 + ViT-Tiny
+Hybrid-3,0,3,ViT-Tiny + Swin-Tiny + MobileViT-XS
+Hybrid-3,1,3,TinyViT-5M + DenseNet121 + MobileViT-XS
+Hybrid-3,2,3,TinyViT-5M + DenseNet121 + Swin-Tiny
+Hybrid-3,3,3,MobileViT-XS + DenseNet121 + TinyViT-5M
+Hybrid-3,4,3,ResNet50 + ViT-Tiny + EfficientFormerV2-S0
+Hybrid-4,0,4,ViT-Tiny + Swin-Tiny + MobileViT-XS + TinyViT-5M
+Hybrid-4,1,4,TinyViT-5M + DenseNet121 + MobileViT-XS + EfficientFormerV2-S0
+Hybrid-4,2,4,TinyViT-5M + DenseNet121 + Swin-Tiny + MobileViT-XS
+Hybrid-4,3,4,MobileViT-XS + DenseNet121 + TinyViT-5M + ResNet50
+Hybrid-4,4,4,ResNet50 + ViT-Tiny + EfficientFormerV2-S0 + MobileViT-XS
+Best single (composite),0,1,ViT-Tiny
+Best single (composite),1,1,TinyViT-5M
+Best single (composite),2,1,TinyViT-5M
+Best single (composite),3,1,MobileViT-XS
+Best single (composite),4,1,ResNet50
+Best single (accuracy),0,1,ViT-Tiny
+Best single (accuracy),1,1,TinyViT-5M
+Best single (accuracy),2,1,Swin-Tiny
+Best single (accuracy),3,1,Swin-Tiny
+Best single (accuracy),4,1,ViT-Tiny
+Accuracy Top-2,0,2,ViT-Tiny + Swin-Tiny
+Accuracy Top-2,1,2,TinyViT-5M + ViT-Tiny
+Accuracy Top-2,2,2,Swin-Tiny + ViT-Tiny
+Accuracy Top-2,3,2,Swin-Tiny + MobileViT-XS
+Accuracy Top-2,4,2,ViT-Tiny + Swin-Tiny
+Accuracy Top-3,0,3,ViT-Tiny + Swin-Tiny + MobileViT-XS
+Accuracy Top-3,1,3,TinyViT-5M + ViT-Tiny + DenseNet121
+Accuracy Top-3,2,3,Swin-Tiny + ViT-Tiny + MobileViT-XS
+Accuracy Top-3,3,3,Swin-Tiny + MobileViT-XS + DenseNet121
+Accuracy Top-3,4,3,ViT-Tiny + Swin-Tiny + EfficientFormerV2-S0
+Accuracy Top-4,0,4,ViT-Tiny + Swin-Tiny + MobileViT-XS + TinyViT-5M
+Accuracy Top-4,1,4,TinyViT-5M + ViT-Tiny + DenseNet121 + MobileViT-XS
+Accuracy Top-4,2,4,Swin-Tiny + ViT-Tiny + MobileViT-XS + TinyViT-5M
+Accuracy Top-4,3,4,Swin-Tiny + MobileViT-XS + DenseNet121 + ViT-Tiny
+Accuracy Top-4,4,4,ViT-Tiny + Swin-Tiny + EfficientFormerV2-S0 + TinyViT-5M
+All-9 equal-weight,0,9,Swin-Tiny + TinyViT-5M + ViT-Tiny + DenseNet121 + VGG16 + MobileViT-XS + EfficientFormerV2-S0 + ResNet50 + EfficientNet-B0
+All-9 equal-weight,1,9,Swin-Tiny + TinyViT-5M + ViT-Tiny + DenseNet121 + VGG16 + MobileViT-XS + EfficientFormerV2-S0 + ResNet50 + EfficientNet-B0
+All-9 equal-weight,2,9,Swin-Tiny + TinyViT-5M + ViT-Tiny + DenseNet121 + VGG16 + MobileViT-XS + EfficientFormerV2-S0 + ResNet50 + EfficientNet-B0
+All-9 equal-weight,3,9,Swin-Tiny + TinyViT-5M + ViT-Tiny + DenseNet121 + VGG16 + MobileViT-XS + EfficientFormerV2-S0 + ResNet50 + EfficientNet-B0
+All-9 equal-weight,4,9,Swin-Tiny + TinyViT-5M + ViT-Tiny + DenseNet121 + VGG16 + MobileViT-XS + EfficientFormerV2-S0 + ResNet50 + EfficientNet-B0
+Single: Swin-Tiny,0,1,Swin-Tiny
+Single: Swin-Tiny,1,1,Swin-Tiny
+Single: Swin-Tiny,2,1,Swin-Tiny
+Single: Swin-Tiny,3,1,Swin-Tiny
+Single: Swin-Tiny,4,1,Swin-Tiny
+Single: TinyViT-5M,0,1,TinyViT-5M
+Single: TinyViT-5M,1,1,TinyViT-5M
+Single: TinyViT-5M,2,1,TinyViT-5M
+Single: TinyViT-5M,3,1,TinyViT-5M
+Single: TinyViT-5M,4,1,TinyViT-5M
+Single: ViT-Tiny,0,1,ViT-Tiny
+Single: ViT-Tiny,1,1,ViT-Tiny
+Single: ViT-Tiny,2,1,ViT-Tiny
+Single: ViT-Tiny,3,1,ViT-Tiny
+Single: ViT-Tiny,4,1,ViT-Tiny
+Single: DenseNet121,0,1,DenseNet121
+Single: DenseNet121,1,1,DenseNet121
+Single: DenseNet121,2,1,DenseNet121
+Single: DenseNet121,3,1,DenseNet121
+Single: DenseNet121,4,1,DenseNet121
+Single: VGG16,0,1,VGG16
+Single: VGG16,1,1,VGG16
+Single: VGG16,2,1,VGG16
+Single: VGG16,3,1,VGG16
+Single: VGG16,4,1,VGG16
+Single: MobileViT-XS,0,1,MobileViT-XS
+Single: MobileViT-XS,1,1,MobileViT-XS
+Single: MobileViT-XS,2,1,MobileViT-XS
+Single: MobileViT-XS,3,1,MobileViT-XS
+Single: MobileViT-XS,4,1,MobileViT-XS
+Single: EfficientFormerV2-S0,0,1,EfficientFormerV2-S0
+Single: EfficientFormerV2-S0,1,1,EfficientFormerV2-S0
+Single: EfficientFormerV2-S0,2,1,EfficientFormerV2-S0
+Single: EfficientFormerV2-S0,3,1,EfficientFormerV2-S0
+Single: EfficientFormerV2-S0,4,1,EfficientFormerV2-S0
+Single: ResNet50,0,1,ResNet50
+Single: ResNet50,1,1,ResNet50
+Single: ResNet50,2,1,ResNet50
+Single: ResNet50,3,1,ResNet50
+Single: ResNet50,4,1,ResNet50
+Single: EfficientNet-B0,0,1,EfficientNet-B0
+Single: EfficientNet-B0,1,1,EfficientNet-B0
+Single: EfficientNet-B0,2,1,EfficientNet-B0
+Single: EfficientNet-B0,3,1,EfficientNet-B0
+Single: EfficientNet-B0,4,1,EfficientNet-B0
